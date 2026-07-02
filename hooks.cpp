@@ -538,7 +538,7 @@ bool InstallLuaHook()
         {0x729690, (LPVOID)&lua51_pcall,           (LPVOID*)&original_pcall},
         {0x7380B0, (LPVOID)&lua51_resume,          (LPVOID*)&original_resume},
         {0x729370, (LPVOID)&lua51_settable,        (LPVOID*)&original_settable},
-        {0x613C30, (LPVOID)&getthreadcount,        (LPVOID*)&original_getthreadcount},// Bad
+        {0x613C30, (LPVOID)&getthreadcount,        (LPVOID*)&original_getthreadcount}, // Hook after client init
         {0x729790, (LPVOID)&lua51_gc,              (LPVOID*)&original_gc},
         {0x782D00, (LPVOID)&lua51c_step,           (LPVOID*)&originalc_step},
         {0x729DA0, (LPVOID)&lua51_newthread,       (LPVOID*)&original_newthread},
@@ -550,7 +550,7 @@ bool InstallLuaHook()
         {0x7290E0, (LPVOID)&lua51_pushlightuserdata,(LPVOID*)&original_plud},
         {0x7291C0, (LPVOID)&lua51_rawget,          (LPVOID*)&original_rawget},
         {0x728970, (LPVOID)&lua51_remove,          (LPVOID*)&original_remove},
-        {0x729400, (LPVOID)&lua51_rawset,          (LPVOID*)&original_rawset}, // Bad
+        {0x729400, (LPVOID)&lua51_rawset,          (LPVOID*)&original_rawset}, // Hook after client init
         {0x728B70, (LPVOID)&lua51_isnumber,        (LPVOID*)&original_isnumber},
         {0x728CA0, (LPVOID)&lua51_tointeger,       (LPVOID*)&original_tointeger},
         {0x7288F0, (LPVOID)&lua51_atpanic,         (LPVOID*)&original_atpanic},
@@ -561,7 +561,7 @@ bool InstallLuaHook()
         {0x729200, (LPVOID)&lua51_rawgeti,         (LPVOID*)&original_rawgeti},
         {0x729240, (LPVOID)&lua51_createtable,     (LPVOID*)&original_createtable},
         {0x728F10, (LPVOID)&lua51_pushlstring,     (LPVOID*)&original_pushlstring},
-        {0x729480, (LPVOID)&lua51_rawseti,         (LPVOID*)&original_rawseti}, // Bad
+        {0x729480, (LPVOID)&lua51_rawseti,         (LPVOID*)&original_rawseti}, // Hook after client init
         {0x7292A0, (LPVOID)&lua51_getmetatable,    (LPVOID*)&original_getmetatable},
         {0x7289C0, (LPVOID)&lua51_insert,          (LPVOID*)&original_insert},
         {0x728A10, (LPVOID)&lua51_replace,         (LPVOID*)&original_replace},
